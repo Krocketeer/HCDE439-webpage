@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/hcde439-webpage/static/css/main.5ad8c267.chunk.css",
+    "main.js": "/hcde439-webpage/static/js/main.91dbc35c.chunk.js",
+    "main.js.map": "/hcde439-webpage/static/js/main.91dbc35c.chunk.js.map",
+    "runtime-main.js": "/hcde439-webpage/static/js/runtime-main.2386ab82.js",
+    "runtime-main.js.map": "/hcde439-webpage/static/js/runtime-main.2386ab82.js.map",
+    "static/css/2.3a395901.chunk.css": "/hcde439-webpage/static/css/2.3a395901.chunk.css",
+    "static/js/2.805d9c75.chunk.js": "/hcde439-webpage/static/js/2.805d9c75.chunk.js",
+    "static/js/2.805d9c75.chunk.js.map": "/hcde439-webpage/static/js/2.805d9c75.chunk.js.map",
+    "index.html": "/hcde439-webpage/index.html",
+    "precache-manifest.21243d551a4918dda7be79d0e0d57ccc.js": "/hcde439-webpage/precache-manifest.21243d551a4918dda7be79d0e0d57ccc.js",
+    "service-worker.js": "/hcde439-webpage/service-worker.js",
+    "static/css/2.3a395901.chunk.css.map": "/hcde439-webpage/static/css/2.3a395901.chunk.css.map",
+    "static/css/main.5ad8c267.chunk.css.map": "/hcde439-webpage/static/css/main.5ad8c267.chunk.css.map",
+    "static/js/2.805d9c75.chunk.js.LICENSE.txt": "/hcde439-webpage/static/js/2.805d9c75.chunk.js.LICENSE.txt",
+    "static/media/Bus Stop Mockup 2.png": "/hcde439-webpage/static/media/Bus Stop Mockup 2.4faa6025.png",
+    "static/media/Bus Stop Mockup.png": "/hcde439-webpage/static/media/Bus Stop Mockup.c404bb65.png",
+    "static/media/Colors.png": "/hcde439-webpage/static/media/Colors.e4faf52e.png",
+    "static/media/Icons.png": "/hcde439-webpage/static/media/Icons.85bd3720.png",
+    "static/media/Light Rail Sign.png": "/hcde439-webpage/static/media/Light Rail Sign.079a14f9.png",
+    "static/media/LowFiWireframes.pdf": "/hcde439-webpage/static/media/LowFiWireframes.20c6d466.pdf",
+    "static/media/Moodboard.png": "/hcde439-webpage/static/media/Moodboard.723391c7.png",
+    "static/media/Orca Card Mockup.png": "/hcde439-webpage/static/media/Orca Card Mockup.b1d8ae82.png",
+    "static/media/Rail Station Mockup.png": "/hcde439-webpage/static/media/Rail Station Mockup.ffd79f91.png",
+    "static/media/STCover.png": "/hcde439-webpage/static/media/STCover.719515c8.png",
+    "static/media/Type.png": "/hcde439-webpage/static/media/Type.b1ebfc23.png",
+    "static/media/UserFlow.pdf": "/hcde439-webpage/static/media/UserFlow.26c675e2.pdf",
+    "static/media/menu.svg": "/hcde439-webpage/static/media/menu.ca394ec8.svg",
+    "static/media/server-illustration-2.svg": "/hcde439-webpage/static/media/server-illustration-2.973a848d.svg",
+    "static/media/server-secure-illustration.svg": "/hcde439-webpage/static/media/server-secure-illustration.0af0a49c.svg",
+    "static/media/svg-decorator-blob-1.ec52da39.svg": "/hcde439-webpage/static/media/svg-decorator-blob-1.ec52da39.svg",
+    "static/media/x.svg": "/hcde439-webpage/static/media/x.b0200bf7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2386ab82.js",
+    "static/css/2.3a395901.chunk.css",
+    "static/js/2.805d9c75.chunk.js",
+    "static/css/main.5ad8c267.chunk.css",
+    "static/js/main.91dbc35c.chunk.js"
+  ]
+}
