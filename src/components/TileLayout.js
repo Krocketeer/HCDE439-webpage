@@ -7,7 +7,7 @@ import { css } from "styled-components/macro";
 import { SectionHeading } from "./misc/Headings";
 import { PrimaryButton } from "./misc/Buttons";
 
-import BlinkCover from "../images/Blink/IMG_2129.jpeg"
+import BlinkCover from "../images/Blink/Blinking.gif"
 
 const HeadingRow = tw.div`flex`;
 const Heading = tw(SectionHeading)`text-gray-900`;
