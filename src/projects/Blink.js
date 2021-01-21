@@ -9,7 +9,7 @@ import { SRLWrapper } from "simple-react-lightbox"
 import ScrollArrow from "../components/ScrollArrow";
 
 import BlinkCover from "../images/Blink/IMG_2129.png"
-import schematic from "../images/Blink/circuitWhiteBackground.svg"
+import schematic from "../images/Blink/circuit.svg"
 import circuit from "../images/Blink/IMG_2129.jpeg"
 import blinkingLEDs from "../images/Blink/Blinking.gif"
 

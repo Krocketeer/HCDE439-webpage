@@ -26,7 +26,7 @@ void loop() {
     digitalWrite(redLED, HIGH);
     
     // wait for .15 seconds
-    delay(150); 
+    delay(300); 
     
     // turn off the redLED by making the voltage LOW 
     digitalWrite(redLED, LOW);
@@ -34,7 +34,7 @@ void loop() {
     digitalWrite(whiteLED, HIGH);
     
     // wait for .15 seconds
-    delay(150);
+    delay(100);
 
     //Turn off the whiteLED
     digitalWrite(whiteLED, LOW);
@@ -42,7 +42,7 @@ void loop() {
     digitalWrite(greenLED, HIGH);
 
     // wait for .15 seconds
-    delay(150);
+    delay(300);
 
     //Turn on the greenLED
     digitalWrite(greenLED, LOW);
