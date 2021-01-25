@@ -1,3 +1,8 @@
+/*
+ * Base code credit to contributors and developers of Debounce on Arduino
+ * https://www.arduino.cc/en/Tutorial/BuiltInExamples/Debounce
+ */
+
 // Import statement to make Arduino work with Clion
 #include <Arduino.h>
 

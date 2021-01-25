@@ -1,3 +1,7 @@
+/*
+ * Base code credit to contributors and developers of Blink on Arduino
+ * https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink
+ */
 
 // Global Variables
 const int buttonPin = 2;     // the number of the pushbutton pin
