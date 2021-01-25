@@ -83,8 +83,7 @@ void loop() {
                     digitalWrite(B, LOW);
                     // reset State to LOW or false
                     ledState = !ledState;
-                }
-                else {
+                } else {
                     // if LED state is not high, turn blue LED off
                     digitalWrite(B, LOW);
                 }

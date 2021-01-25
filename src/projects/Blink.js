@@ -160,9 +160,13 @@ const lightboxOptions = {
     showDownloadButton: false,
 }
 
-const code =
+const code = "/*\n" +
+    " * Base code credit to contributors and developers of Blink on Arduino\n" +
+    " * https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink\n" +
+    " */\n" +
+    "\n" +
     "// Global Variables\n" +
-    "const int buttonPin = 2;     // the number of the push button pin\n" +
+    "const int buttonPin = 2;     // the number of the pushbutton pin\n" +
     "const int redLED = 12;       // pin of redLED\n" +
     "const int whiteLED = 10;     // pin of whiteLED\n" +
     "const int greenLED = 8;      // pin of greenLED\n" +
@@ -188,7 +192,7 @@ const code =
     "    digitalWrite(redLED, HIGH);\n" +
     "    \n" +
     "    // wait for .15 seconds\n" +
-    "    delay(150); \n" +
+    "    delay(300); \n" +
     "    \n" +
     "    // turn off the redLED by making the voltage LOW \n" +
     "    digitalWrite(redLED, LOW);\n" +
@@ -196,7 +200,7 @@ const code =
     "    digitalWrite(whiteLED, HIGH);\n" +
     "    \n" +
     "    // wait for .15 seconds\n" +
-    "    delay(150);\n" +
+    "    delay(100);\n" +
     "\n" +
     "    //Turn off the whiteLED\n" +
     "    digitalWrite(whiteLED, LOW);\n" +
@@ -204,7 +208,7 @@ const code =
     "    digitalWrite(greenLED, HIGH);\n" +
     "\n" +
     "    // wait for .15 seconds\n" +
-    "    delay(150);\n" +
+    "    delay(300);\n" +
     "\n" +
     "    //Turn on the greenLED\n" +
     "    digitalWrite(greenLED, LOW);\n" +

@@ -4,6 +4,7 @@ import About from "./About"
 import Home from "./Home"
 import ProjectTemplate from './projects/ProjectTemplate'
 import Blink from "./projects/Blink"
+import Fade from "./projects/Fade"
 
 export default function Routing() {
     return <Switch>
@@ -11,6 +12,7 @@ export default function Routing() {
         <Route path="/about" exact component={About} />
         <Route path="/temp" exact component={ProjectTemplate} />
         <Route path="/blink" exact component={Blink} />
+        <Route path="/fade" exact component={Fade} />
         <Route path="*" component={Home}/>
     </Switch>
 }
