@@ -65,7 +65,7 @@ void loop() {
                         Serial.println(i);
                         // writes analog value of i to red LED
                         analogWrite(R, i);
-                        // delay for .1 seconds
+                        // delay for .01 seconds
                         delay(10);
                     }
                     // turns hot pink colored LED back to blue
@@ -75,7 +75,7 @@ void loop() {
                         Serial.println(i);
                         // writes analog value of i to red LED
                         analogWrite(R, i);
-                        // delay for .1 seconds
+                        // delay for .01 seconds
                         delay(10);
                     }
                     // turn off LEDs by setting voltage to LOW

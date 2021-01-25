@@ -243,7 +243,7 @@ const code = "/*\n" +
     "                        Serial.println(i);\n" +
     "                        // writes analog value of i to red LED\n" +
     "                        analogWrite(R, i);\n" +
-    "                        // delay for .1 seconds\n" +
+    "                        // delay for .01 seconds\n" +
     "                        delay(10);\n" +
     "                    }\n" +
     "                    // turns hot pink colored LED back to blue\n" +
@@ -253,7 +253,7 @@ const code = "/*\n" +
     "                        Serial.println(i);\n" +
     "                        // writes analog value of i to red LED\n" +
     "                        analogWrite(R, i);\n" +
-    "                        // delay for .1 seconds\n" +
+    "                        // delay for .01 seconds\n" +
     "                        delay(10);\n" +
     "                    }\n" +
     "                    // turn off LEDs by setting voltage to LOW\n" +
