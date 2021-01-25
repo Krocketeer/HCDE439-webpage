@@ -1,0 +1,1 @@
+`pio device monitor`: to turn on Serial Monitor
