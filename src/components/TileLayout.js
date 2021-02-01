@@ -9,7 +9,7 @@ import { PrimaryButton } from "./misc/Buttons";
 
 import BlinkCover from "../images/Blink/Blinking.gif"
 import FadeCover from "../images/Fade/FadingLED.gif"
-import Fade from "../projects/Fade";
+import InOutCover from "../images/InputOutput/InputOutputGif.gif"
 
 const HeadingRow = tw.div`flex`;
 const Heading = tw(SectionHeading)`text-gray-900`;
@@ -47,7 +47,7 @@ const LoadMoreButton = tw(PrimaryButton)`mt-16 mx-auto`;
 
 export default ({
                     headingText = "Projects",
-                    posts = [assignment2(), assignment1(), assignment3(), assignment4(), assignment5(), assignment6(), finalProject()]
+                    posts = [assignment3(), assignment1(), assignment2(), assignment4(), assignment5(), assignment6(), finalProject()]
                 }) => {
     const [visible, setVisible] = useState(7);
     const onLoadMoreClick = () => {
@@ -110,16 +110,16 @@ const assignment2 =()=> ({
     title: "Fade!",
     description: "A circuit that utilizes a button to fade a RGB LED",
     url: "/fade",
-    featured: true
+    featured: false
 })
 const assignment3 =()=> ({
-    imageSrc: "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
+    imageSrc: InOutCover,
     category: "Assignment 3",
-    date: "Assignment 3",
+    date: "",
     title: "Input Output!",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    url: "/",
-    featured: false
+    description: "A circuit that uses a photoresistor to switch between a constant LED and a fading one depending on the light",
+    url: "/inputoutput",
+    featured: true
 })
 const assignment4 =()=> ({
     imageSrc: "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
@@ -143,7 +143,7 @@ const assignment6 =()=> ({
     imageSrc: "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
     category: "Assignment 6",
     date: "Assignment 6",
-    title: "Talking to the Web!  _",
+    title: "Talking to the Web!",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     url: "/",
     featured: false
@@ -152,7 +152,7 @@ const finalProject =()=> ({
     imageSrc: "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
     category: "Final Project",
     date: "Final Project",
-    title: "To Be Titled Later On!    _",
+    title: "To Be Titled Later On!",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     url: "/",
     featured: false
