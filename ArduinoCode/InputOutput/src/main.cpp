@@ -1,16 +1,18 @@
+/*
+ * Base code credit to contributors and developers of Analog In, Out Serial on Arduino
+ * https://www.arduino.cc/en/Tutorial/BuiltInExamples/AnalogInOutSerial
+ */
+
 #include <Arduino.h>
 const int G = 9;
 const int R = 11;
-const int B = 10;
 const int analogInPin = A0;
-//const int AnalogOutPin = 6;
 int sensorValue = 0;
 int outputValue = 0;
 
 void setup() {
     pinMode(R, OUTPUT);
     pinMode(G, OUTPUT);
-    pinMode(B, OUTPUT);
     Serial.begin(9600);
 }
 
@@ -19,26 +21,34 @@ void loop() {
 //    sensorValue = constrain(sensorValue, 20, 125);
     sensorValue = constrain(analogRead(analogInPin), 20, 125);
     outputValue = map(sensorValue, 20, 125, 0, 255);
-//    analogWrite(G, outputValue);
     if (sensorValue > 20) {
+        Serial.print("Green LED On");
         analogWrite(G, outputValue);
         digitalWrite(R, LOW);
-//        digitalWrite(B, LOW);
     } else {
         digitalWrite(G, LOW);
-//        digitalWrite(B, HIGH);
         for (int i = 0; i < 256; i+= 5) {
+            Serial.println("Red LED On");
+            sensorValue = constrain(analogRead(analogInPin), 20, 125);
+            if (sensorValue > 20) {
+                break;
+            }
             analogWrite(R, i);
             delay(10);
         }
         for (int i = 255; i >= 0; i-= 5) {
+            Serial.println("Red LED On");
+            sensorValue = constrain(analogRead(analogInPin), 20, 125);
+            if (sensorValue > 20) {
+                break;
+            }
             analogWrite(R, i);
             delay(10);
         }
     }
 
     // print the results to the Serial Monitor:
-    Serial.print("sensor = ");
+    Serial.print("\t sensor = ");
     Serial.print(sensorValue);
     Serial.print("\t output = ");
     Serial.println(outputValue);
