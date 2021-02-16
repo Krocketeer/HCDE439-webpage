@@ -6,6 +6,7 @@ import ProjectTemplate from './projects/ProjectTemplate'
 import Blink from "./projects/Blink"
 import Fade from "./projects/Fade"
 import InputOutput from "./projects/InputOutput";
+import Libraries from "./projects/Libraries"
 
 export default function Routing() {
     return <Switch>
@@ -15,6 +16,7 @@ export default function Routing() {
         <Route path="/blink" exact component={Blink} />
         <Route path="/fade" exact component={Fade} />
         <Route path="/inputoutput" exact component={InputOutput} />
+        <Route path="/libraries" exact component={Libraries} />
         <Route path="*" component={Home}/>
     </Switch>
 }

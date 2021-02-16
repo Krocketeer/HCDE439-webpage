@@ -13,8 +13,6 @@ import schematic from "../images/InputOutput/InputOutputSchematic.svg"
 import circuit from "../images/InputOutput/IMG_2221.jpeg"
 import inOutGif from "../images/InputOutput/InputOutputGif.gif"
 
-import fadedLED from "../images/Fade/FadingLED.gif"
-
 const Container = tw.div`relative`;
 // Random Decorator Blobs (shapes that you see in background)
 const DecoratorBlob1 = styled(SvgDecoratorBlob1)`

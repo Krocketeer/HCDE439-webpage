@@ -30,3 +30,6 @@ yarn-error.log*
 ### Firebase Patch ###
 .runtimeconfig.json
 .firebase/
+
+# Large Files :(
+/src/images/Libraries/LibraryLong.gif
