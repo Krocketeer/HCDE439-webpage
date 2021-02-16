@@ -125,7 +125,7 @@ const assignment3 =()=> ({
 const assignment4 =()=> ({
     imageSrc: LibraryCover,
     category: "Assignment 4",
-    date: "Assignment 4",
+    date: "",
     title: "Libraries!",
     description: "A circuit that uses an IR sensor and remote to control a LED",
     url: "/libraries",
