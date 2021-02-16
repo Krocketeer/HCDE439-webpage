@@ -4,13 +4,13 @@
 #include "ServoCode.h"
 
 void setup() {
-//    IRRemoteSetup();
-    CapacitiveSensorSetup();
+    IRRemoteSetup();
+//    CapacitiveSensorSetup();
 //    ServoSetup();
 }
 
 void loop() {
-//    IRRemoteLoop();
-    CapacitiveSensorLoop();
+    IRRemoteLoop();
+//    CapacitiveSensorLoop();
 //    ServoLoop();
 }
