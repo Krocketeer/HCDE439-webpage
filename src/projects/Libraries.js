@@ -132,7 +132,8 @@ export default function Libraries() {
                             <p style={{paddingBottom: "25px"}}>
                                 Once the code was verified and uploaded to the Arduino. It was now time to test it out!
                                 The gif shows the full functionality of the project: turning on and off the LED,
-                                switching the LED colors, adjusting the brightness, and fading the LED.
+                                switching the LED colors, adjusting the brightness, and fading the LED. (If you don't
+                                see the gif right away, give it a few moments since it's a big file!).
                             </p>
                             <div style={styles.centerDiv}>
                                 <img id="SeaTransIcons" src={libraryGif} alt="Gif of a LED controlled by an IR Sensor" />
