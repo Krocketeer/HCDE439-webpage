@@ -94,8 +94,9 @@ export default function Libraries() {
                                 <a href={links.inout} style={{color: "rgb(100, 21, 255)"}}> photoresistor
                                     and its corresponding resistor </a> and replace it with a IR Sensor. Though one
                                 thing to note that was different from last week was that I had to shift the pins for
-                                the RGB LED over since pin 11 on my Arduino gave me some odd behavior with analogWrite()
-                                while I was testing earlier and I'm still not sure why it's not properly fading a LED.
+                                the RGB LED over since pin 11 on my Arduino gave me some odd behavior with analogWrite().
+                                I eventually realized that pin 11 (and pin 3) are used by the IRRemote Library for its
+                                timer function.
                             </p>
                             <img id="SeaTransColor" src={circuit} alt="Fully built circuit of RGB LED, IR Sensor and the Arduino" />
                         </div>
