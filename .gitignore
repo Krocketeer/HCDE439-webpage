@@ -33,3 +33,4 @@ yarn-error.log*
 
 # Large Files :(
 /src/images/Libraries/LibraryLong.gif
+/src/images/HigherVoltage/HighVoltGifLong.gif

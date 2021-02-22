@@ -216,4 +216,16 @@ html, body{
     margin-bottom: 40px;
     cursor: zoom-in;
   }
+
+  .BaseCampPersonaLayout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .BaseCampPersona {
+    width: 49%;
+    height: 100%;
+    margin-bottom: 25px;
+  }
 }

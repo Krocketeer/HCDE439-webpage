@@ -76,7 +76,8 @@ export default function Libraries() {
                                 change at all since I had a dedicated homework breadboard and I only ever dismantled it
                                 to work on the next project. The RGB LED utilized a 330 Ω resistor which when using the
                                 Red and Green diodes gave me a current of approximately 9.09mA ([5V - 2V]/ 330 Ω ≈ 9.09
-                                mA) and 5.45 mA ([5V - 3.2V]/ 330 Ω ≈ 5.45 mA) respectively when using values from this
+                                mA) and the Blue diode gave me a current of approximately 5.45 mA
+                                ([5V - 3.2V]/ 330 Ω ≈ 5.45 mA) when using values from this
                                 <a href={links.LEDdataSheet} style={{color: "rgb(100, 21, 255)"}}> data sheet</a>. That
                                 was it, in terms of circuit values that I had to implement for this project. The only
                                 thing left was to connect the IR Sensor to my Arduino through power, ground, and data

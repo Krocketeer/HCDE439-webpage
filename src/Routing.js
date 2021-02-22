@@ -7,6 +7,7 @@ import Blink from "./projects/Blink"
 import Fade from "./projects/Fade"
 import InputOutput from "./projects/InputOutput";
 import Libraries from "./projects/Libraries"
+import HigherVoltage from "./projects/HigherVoltage";
 
 export default function Routing() {
     return <Switch>
@@ -17,6 +18,7 @@ export default function Routing() {
         <Route path="/fade" exact component={Fade} />
         <Route path="/inputoutput" exact component={InputOutput} />
         <Route path="/libraries" exact component={Libraries} />
+        <Route path="/highervoltage" exact component={HigherVoltage} />
         <Route path="*" component={Home}/>
     </Switch>
 }

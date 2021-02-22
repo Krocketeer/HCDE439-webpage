@@ -3,7 +3,7 @@
  * HCDE 439, Winter 2021
  * 2/21/21
  * Assignment 5: HigherVoltage!
- * Description: Allows the control of a LED with a IR Remote
+ * Description: Allows the control of a DC Motor with a IR Sensor & Remote
  * Credits: These resources were used as starters for this project
  *  - IRRemote (https://github.com/z3t0/Arduino-IRremote), Armin Joachimsmeyer
  *  - Debounce (https://www.arduino.cc/en/Tutorial/BuiltInExamples/Debounce), Arduino

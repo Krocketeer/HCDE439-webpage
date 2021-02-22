@@ -11,6 +11,7 @@ import BlinkCover from "../images/Blink/Blinking.gif"
 import FadeCover from "../images/Fade/FadingLED.gif"
 import InOutCover from "../images/InputOutput/InputOutputGif.gif"
 import LibraryCover from "../images/Libraries/LibraryShort.gif"
+import HighVCover from "../images/HigherVoltage/HIghVoltGifShort.gif"
 
 const HeadingRow = tw.div`flex`;
 const Heading = tw(SectionHeading)`text-gray-900`;
@@ -48,7 +49,7 @@ const LoadMoreButton = tw(PrimaryButton)`mt-16 mx-auto`;
 
 export default ({
                     headingText = "Projects",
-                    posts = [assignment4(), assignment1(), assignment2(), assignment3(), assignment5(), assignment6(), finalProject()]
+                    posts = [assignment5(), assignment1(), assignment2(), assignment3(), assignment4(), assignment6(), finalProject()]
                 }) => {
     const [visible, setVisible] = useState(7);
     const onLoadMoreClick = () => {
@@ -129,16 +130,16 @@ const assignment4 =()=> ({
     title: "Libraries!",
     description: "A circuit that uses an IR sensor and remote to control a LED",
     url: "/libraries",
-    featured: true
+    featured: false
 })
 const assignment5 =()=> ({
-    imageSrc: "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
+    imageSrc: HighVCover,
     category: "Assignment 5",
-    date: "Assignment 5",
-    title: "[Higher] Voltage & Transistors!",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    url: "/",
-    featured: false
+    date: "",
+    title: "Higher Voltage & Transistors!",
+    description: "A circuit that uses an IR Sensor and Remote to control a DC Motor",
+    url: "/highervoltage",
+    featured: true
 })
 const assignment6 =()=> ({
     imageSrc: "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
