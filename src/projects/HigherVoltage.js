@@ -91,11 +91,11 @@ export default function HigherVoltage() {
                                 Ω resistors in parallel with the DC Motor in order to achieve a current of 36.4 mA
                                 ([12V - 6V] / 165 Ω ≈ 36.4 mA, using a power converter rated at 12V). While I knew the
                                 ideal current for the DC Motor was 90 mA (from this
-                                <a href={links.DCMotorDataSheet} style={{color: "rgb(100, 21, 255)"}}> data sheet</a>), I
-                                opted to reduce the current by a third because operating the DC Motor at 90 mA made me
+                                <a href={links.DCMotorDataSheet} style={{color: "rgb(100, 21, 255)"}}> data sheet</a>),
+                                I opted to reduce the current to a third because operating the DC Motor at 90 mA made me
                                 feel a little too uncomfortable when I did it in testing.
                             </p>
-                            <img id="SeaTransMoodBoard" src={schematic} alt="Schematic that connects a RGB LED and an IR Sensor to an Arduino" />
+                            <img id="SeaTransMoodBoard" src={schematic} alt="Schematic that connects a RGB LED, an IR Sensor, and a DC Motor to an Arduino" />
                         </div>
                     </div>
                     <div>
@@ -155,7 +155,7 @@ export default function HigherVoltage() {
                                 and off the DC Motor as well as adjusting its RPM.
                             </p>
                             <div style={styles.centerDiv}>
-                                <img id="SeaTransIcons" src={highVoltGif} alt="Gif of a LED controlled by an IR Sensor" />
+                                <img id="SeaTransIcons" src={highVoltGif} alt="Gif of a DC Motor controlled by an IR Sensor" />
                             </div>
                         </div>
                     </div>
