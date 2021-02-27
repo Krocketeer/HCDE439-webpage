@@ -1,7 +1,7 @@
 var serial; // variable to hold an instance of the serialport library
-var portName = '/dev/ttyACM0' //rename to the name of your port
+var portName = '/dev/tty.usbserial-01677F32' //rename to the name of your port
 var dataarray = []; //some data coming in over serial!
-var xPos = 0;
+let xPos = 0;
 
 
 function setup() {
@@ -15,71 +15,89 @@ function setup() {
  
   serial.list();                      // list the serial ports
   serial.open(portName);              // open a serial port
-  createCanvas(1200, 800);
+  createCanvas(windowWidth, windowHeight);
   background(0x08, 0x16, 0x40);
 }
  
 // get the list of ports:
 function printList(portList) {
- // portList is an array of serial port names
- for (var i = 0; i < portList.length; i++) {
- // Display the list the console:
-   print(i + " " + portList[i]);
- }
+  // portList is an array of serial port names
+   for (let i = 0; i < portList.length; i++) {
+   // Display the list the console:
+      print(i + " " + portList[i]);
+   }
 }
 
 function serverConnected() {
-  print('connected to server.');
+    print('connected to server.');
 }
  
 function portOpen() {
-  print('the serial port opened.')
+    print('the serial port opened.')
 }
  
 function serialError(err) {
-  print('Something went wrong with the serial port. ' + err);
+    print('Something went wrong with the serial port. ' + err);
 }
  
 function portClose() {
-  print('The serial port closed.');
+    print('The serial port closed.');
 }
 
 function serialEvent() {
-  if (serial.available()) {
-    var datastring = serial.readLine(); // readin some serial
-    var newarray; 
-    try {
-      newarray = JSON.parse(datastring); // can we parse the serial
-      } catch(err) {
-          //console.log(err);
+    if (serial.available()) {
+        let datastring = serial.readLine(); // readin some serial
+        let newarray;
+        try {
+            newarray = JSON.parse(datastring); // can we parse the serial
+        }
+            catch(err) {
+              //console.log(err);
+        }
+        if (typeof(newarray) == 'object') {
+            dataarray = newarray;
+        }
+        console.log("got back " + datastring);
     }
-    if (typeof(newarray) == 'object') {
-      dataarray = newarray;
-    }
-    console.log("got back " + datastring);
-  } 
 }
 
 function graphData(newData) {
   // map the range of the input to the window height:
-  var yPos = map(newData, 0, 1023, 0, height);
-  // draw the line
-  line(xPos, height, xPos, height - yPos);
-  // at the edge of the screen, go back to the beginning:
-  if (xPos >= width) {
-    xPos = 0;
-    // clear the screen by resetting the background:
-    background(0x08, 0x16, 0x40);
-  } else {
-    // pass
-  }
+    let yPos = map(newData, 0, 1023, 0, height);
+    // draw the line
+    // line(xPos, height, xPos, height - yPos);
+
+    ellipse(xPos, yPos, 50, 50);
+    // at the edge of the screen, go back to the beginning:
+    if (xPos >= width) {
+        xPos = 0;
+      // clear the screen by resetting the background:
+        background(0x08, 0x16, 0x40);
+    } else {
+      // pass
+    }
 }
 
 function draw() {
-  stroke('rgba(0,255,0,0.25)'); // green
-  graphData(dataarray[0]);
+    // stroke('rgba(0,255,0,0.25)'); // green
+    // graphData(dataarray[0]);
+    //
+    // stroke('rgba(0,80,255,0.5)'); // blue
+    // graphData(dataarray[1]);
+    // xPos++;
 
-  stroke('rgba(0,80,255,0.5)'); // blue
-  graphData(dataarray[1]);
-  xPos++;
+    stroke('rgba(0,80,255,0.5)'); // blue
+    graphPosition(dataarray[0], dataarray[1]);
+}
+
+function graphPosition(xCoord, yCoord) {
+    // make a queue of positions and map that
+    let yPos = map(yCoord,0, 1023,0, height);
+    let xPos = map(xCoord, 0, 1023,0, width);
+
+    // setTimeout(() => {
+    //     background(0x08, 0x16, 0x40);
+    // }, 3000);
+    background(0x08, 0x16, 0x40);
+    ellipse(xPos, yPos, 50, 50);
 }
