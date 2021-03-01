@@ -12,6 +12,7 @@ import FadeCover from "../images/Fade/FadingLED.gif"
 import InOutCover from "../images/InputOutput/InputOutputGif.gif"
 import LibraryCover from "../images/Libraries/LibraryShort.gif"
 import HighVCover from "../images/HigherVoltage/HIghVoltGifShort.gif"
+import WebComCover from "../images/WebCom/JoyStickLED.gif"
 
 const HeadingRow = tw.div`flex`;
 const Heading = tw(SectionHeading)`text-gray-900`;
@@ -49,7 +50,7 @@ const LoadMoreButton = tw(PrimaryButton)`mt-16 mx-auto`;
 
 export default ({
                     headingText = "Projects",
-                    posts = [assignment5(), assignment1(), assignment2(), assignment3(), assignment4(), assignment6(), finalProject()]
+                    posts = [assignment6(), assignment1(), assignment2(), assignment3(), assignment4(), assignment5(), finalProject()]
                 }) => {
     const [visible, setVisible] = useState(7);
     const onLoadMoreClick = () => {
@@ -139,16 +140,16 @@ const assignment5 =()=> ({
     title: "Higher Voltage & Transistors!",
     description: "A circuit that uses an IR Sensor and Remote to control a DC Motor",
     url: "/highervoltage",
-    featured: true
+    featured: false
 })
 const assignment6 =()=> ({
-    imageSrc: "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
+    imageSrc: WebComCover,
     category: "Assignment 6",
-    date: "Assignment 6",
+    date: "",
     title: "Talking to the Web!",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    url: "/",
-    featured: false
+    description: "A circuit that uses a joystick in conjunction with a webpage to change LED colors",
+    url: "/webcom",
+    featured: true
 })
 const finalProject =()=> ({
     imageSrc: "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
