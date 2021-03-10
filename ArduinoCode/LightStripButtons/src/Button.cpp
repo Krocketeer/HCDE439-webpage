@@ -9,8 +9,8 @@
 
 const int whiteLED = 12;
 const int blueLED = 10;
-const int whiteButtonPin = 2;
-const int blueButtonPin = 4;
+const int whiteButtonPin = 4;
+const int blueButtonPin = 2;
 const int offButtonPin = 6;
 
 int lastLED = 12;
