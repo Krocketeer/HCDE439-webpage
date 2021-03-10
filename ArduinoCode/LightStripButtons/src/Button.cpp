@@ -7,107 +7,93 @@
 #include "Button.h"
 #include <Arduino.h>
 
-const int redLED = 12;
-const int greenLED = 10;
-const int blueLED = 8;
-const int redButtonPin = 2;
+const int whiteLED = 12;
+const int blueLED = 10;
+const int whiteButtonPin = 2;
 const int blueButtonPin = 4;
+const int offButtonPin = 6;
 
 int lastLED = 12;
-int ledState = LOW;
-int buttonState;
-int buttonState2;
+int ledState = HIGH;
+int onButton1State;
+int onButton2State;
 int lastButtonState = LOW;
-int lastButtonState2 = LOW;
-boolean swap = false;
+int lastButtonState2 = LOW; 
 unsigned long lastDebounceTime = 0;
 unsigned long debounceDelay = 50;
 
-void ledControl(int ledState);
 
 void ButtonSetup() {
-    pinMode(redButtonPin, INPUT);
-    pinMode(redLED, OUTPUT);
-    pinMode(greenLED, OUTPUT);
+    pinMode(whiteButtonPin, INPUT);
+    pinMode(blueButtonPin, INPUT);
+    pinMode(offButtonPin, INPUT);
+
+    pinMode(whiteLED, OUTPUT);
     pinMode(blueLED, OUTPUT);
-    digitalWrite(redLED, LOW);
+
+    digitalWrite(whiteLED, HIGH);
+    digitalWrite(blueLED, HIGH);
     Serial.begin(9600);
 }
 
 void ButtonLoop() {
-    int reading = digitalRead(redButtonPin);
-    int reading2 = digitalRead(blueButtonPin);
-    if (reading != lastButtonState || reading2 != lastButtonState2) {
+    int onButton1Reading = digitalRead(whiteButtonPin);
+    int onButton2Reading = digitalRead(blueButtonPin);
+    int offButtonReading = digitalRead(offButtonPin);
+
+    if (onButton1Reading != lastButtonState || onButton2Reading != lastButtonState2) {
         lastDebounceTime = millis();
     }
-
+    // Controls first on state -> Blue
     if ((millis() - lastDebounceTime) > debounceDelay) {
-        if (reading != buttonState) {
-            buttonState = reading;
-            if (buttonState == HIGH) {
-                Serial.print("Current LED State: ");
-                Serial.println(ledState);
-                Serial.print("Last LED is: ");
-                Serial.println(lastLED);
-
-                if (ledState == HIGH && lastLED == 12) {
-                    digitalWrite(blueLED, HIGH);
-                    digitalWrite(redLED, LOW);
-                    lastLED = 8;
+        if (onButton1Reading != onButton1State) {
+            onButton1State = onButton1Reading;
+            if (onButton1State == HIGH) {
+                if (ledState == LOW && lastLED == 12) {
+                    digitalWrite(blueLED, LOW);
+                    digitalWrite(whiteLED, HIGH);
+                    lastLED = 10;
                 } else {
                     ledState = !ledState;
                     digitalWrite(blueLED, ledState);
-                    digitalWrite(redLED, LOW);
-                    lastLED = 8;
+                    digitalWrite(whiteLED, HIGH);
+                    lastLED = 10;
                 }
-
-                Serial.print("Changing LED State; State is now: ");
-                Serial.println(ledState);
-                Serial.print("Last LED is: ");
-                Serial.println(lastLED);
             }
         }
     }
-    /* If led state is off, turn on led for button clicked
-     * if led state is on {
-     * if the same button is pressed, turn led off
-     * if it is other button, turn that led on instead
-     * else turn the button off
-     * }
-     *
-     * */
 
+    // Controls second on state -> Red
     if ((millis() - lastDebounceTime) > debounceDelay) {
-        if (reading2 != buttonState2) {
-            buttonState2 = reading2;
-            if (buttonState2 == HIGH) {
-                Serial.print("Current LED State: ");
-                Serial.println(ledState);
-                Serial.print("Last LED is: ");
-                Serial.println(lastLED);
-
-                if (ledState == HIGH && lastLED == 8) {
-                    digitalWrite(redLED, HIGH);
-                    digitalWrite(blueLED, LOW);
+        if (onButton2Reading != onButton2State) {
+            onButton2State = onButton2Reading;
+            if (onButton2State == HIGH) {
+                if (ledState == LOW && lastLED == 10) {
+                    digitalWrite(whiteLED, LOW);
+                    digitalWrite(blueLED, HIGH);
                     lastLED = 12;
                 } else {
                     ledState = !ledState;
-                    digitalWrite(redLED, ledState);
-                    digitalWrite(blueLED, LOW);
+                    digitalWrite(whiteLED, ledState);
+                    digitalWrite(blueLED, HIGH);
                     lastLED = 12;
                 }
-
-                Serial.print("Changing LED State; State is now: ");
-                Serial.println(ledState);
-                Serial.print("Last LED is: ");
-                Serial.println(lastLED);
             }
         }
     }
-    lastButtonState = reading;
-    lastButtonState2 = reading2;
-}
 
-void ledControl(int ledState) {
+    // Controls off state
+    if ((millis() - lastDebounceTime) > debounceDelay) {
+        if (offButtonReading == HIGH) {
+            digitalWrite(blueLED, HIGH);
+            digitalWrite(whiteLED, HIGH);
 
+            if (!ledState) {
+                ledState = !ledState;
+            }
+        }
+    }
+
+    lastButtonState = onButton1Reading;
+    lastButtonState2 = onButton2Reading;
 }
