@@ -13,6 +13,7 @@ import InOutCover from "../images/InputOutput/InputOutputGif.gif"
 import LibraryCover from "../images/Libraries/LibraryShort.gif"
 import HighVCover from "../images/HigherVoltage/HIghVoltGifShort.gif"
 import WebComCover from "../images/WebCom/JoyStickLED.gif"
+import LightBarCover from "../images/LightBar/IMG_2412.png"
 
 const HeadingRow = tw.div`flex`;
 const Heading = tw(SectionHeading)`text-gray-900`;
@@ -50,7 +51,7 @@ const LoadMoreButton = tw(PrimaryButton)`mt-16 mx-auto`;
 
 export default ({
                     headingText = "Projects",
-                    posts = [assignment6(), assignment1(), assignment2(), assignment3(), assignment4(), assignment5(), finalProject()]
+                    posts = [finalProject(), assignment1(), assignment2(), assignment3(), assignment4(), assignment5(), assignment6()]
                 }) => {
     const [visible, setVisible] = useState(7);
     const onLoadMoreClick = () => {
@@ -149,14 +150,14 @@ const assignment6 =()=> ({
     title: "Talking to the Web!",
     description: "A circuit that uses a joystick in conjunction with a webpage to change LED colors",
     url: "/webcom",
-    featured: true
+    featured: false
 })
 const finalProject =()=> ({
-    imageSrc: "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
+    imageSrc: LightBarCover,
     category: "Final Project",
-    date: "Final Project",
-    title: "To Be Titled Later On!",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    url: "/",
-    featured: false
+    date: "",
+    title: "LED Light Bar Switches",
+    description: "A circuit that uses keyboard switches to control a LED Light Bar",
+    url: "/lightbar",
+    featured: true
 })

@@ -9,6 +9,7 @@ import InputOutput from "./projects/InputOutput";
 import Libraries from "./projects/Libraries"
 import HigherVoltage from "./projects/HigherVoltage";
 import WebCom from "./projects/WebCom"
+import LightBar from "./projects/LightBar"
 
 export default function Routing() {
     return <Switch>
@@ -21,6 +22,7 @@ export default function Routing() {
         <Route path="/libraries" exact component={Libraries} />
         <Route path="/highervoltage" exact component={HigherVoltage} />
         <Route path="/webcom" exact component={WebCom} />
+        <Route path="/lightbar" exact component={LightBar} />
         <Route path="*" component={Home}/>
     </Switch>
 }
