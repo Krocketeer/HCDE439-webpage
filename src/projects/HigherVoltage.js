@@ -9,7 +9,6 @@ import { SRLWrapper } from "simple-react-lightbox"
 import ScrollArrow from "../components/ScrollArrow";
 
 import HighVCover from "../images/HigherVoltage/IMG_2283.png"
-
 import schematic from "../images/HigherVoltage/HigherVoltageSchematic.svg"
 import circuit from "../images/HigherVoltage/IMG_2278.jpeg"
 import circuitTop from "../images/HigherVoltage/IMG_2279.jpeg"

@@ -7,12 +7,12 @@ import { css } from "styled-components/macro";
 import { SectionHeading } from "./misc/Headings";
 import { PrimaryButton } from "./misc/Buttons";
 
-import BlinkCover from "../images/Blink/Blinking.gif"
-import FadeCover from "../images/Fade/FadingLED.gif"
-import InOutCover from "../images/InputOutput/InputOutputGif.gif"
-import LibraryCover from "../images/Libraries/LibraryShort.gif"
-import HighVCover from "../images/HigherVoltage/HIghVoltGifShort.gif"
-import WebComCover from "../images/WebCom/JoyStickLED.gif"
+import BlinkCover from "../images/Blink/IMG_2129.png"
+import FadeCover from "../images/Fade/IMG_2153.png"
+import InOutCover from "../images/InputOutput/IMG_2220.png"
+import LibraryCover from "../images/Libraries/IMG_2255.png"
+import HighVCover from "../images/HigherVoltage/IMG_2283.png"
+import WebComCover from "../images/WebCom/IMG_2295.png"
 import LightBarCover from "../images/LightBar/IMG_2412.png"
 
 const HeadingRow = tw.div`flex`;

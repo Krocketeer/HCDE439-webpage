@@ -9,11 +9,10 @@ import { SRLWrapper } from "simple-react-lightbox"
 import ScrollArrow from "../components/ScrollArrow";
 
 import WebComCover from "../images/WebCom/IMG_2295.png"
-
 import schematic from "../images/WebCom/WebCommunicationSchematic.svg"
 import circuit from "../images/WebCom/IMG_2294.jpeg"
 import WebComGif from "../images/WebCom/JoyStickLED.gif"
-import libraryGif from "../images/Libraries/LibraryLong.gif"
+
 
 const Container = tw.div`relative`;
 
