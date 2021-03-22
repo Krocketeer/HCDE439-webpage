@@ -135,8 +135,16 @@ export default function InputOutput() {
                                 Without covering the sensor, the green LED shined bright; and with the covering of the
                                 photoresistor...
                             </p>
+                            {/*<div style={styles.centerDiv}>*/}
+                            {/*    <img id="SeaTransIcons" src={inOutGif} alt="Gif of a fading LED after covering the photoresistor" />*/}
+                            {/*</div>*/}
                             <div style={styles.centerDiv}>
-                                <img id="SeaTransIcons" src={inOutGif} alt="Gif of a fading LED after covering the photoresistor" />
+                                <iframe className="DemoVideo"
+                                        title="Fade Project Demo"
+                                        src="https://www.youtube.com/embed/mnhdxrjFMho"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen />
                             </div>
                         </div>
                     </div>

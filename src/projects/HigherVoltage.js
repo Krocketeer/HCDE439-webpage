@@ -154,8 +154,16 @@ export default function HigherVoltage() {
                                 come together (thankfully no almost fires happened this time)! The gif shows turning on
                                 and off the DC Motor as well as adjusting its RPM.
                             </p>
+                            {/*<div style={styles.centerDiv}>*/}
+                            {/*    <img id="SeaTransIcons" src={highVoltGif} alt="Gif of a DC Motor controlled by an IR Sensor" />*/}
+                            {/*</div>*/}
                             <div style={styles.centerDiv}>
-                                <img id="SeaTransIcons" src={highVoltGif} alt="Gif of a DC Motor controlled by an IR Sensor" />
+                                <iframe className="DemoVideo"
+                                        title="Higher Voltage Project Demo"
+                                        src="https://www.youtube.com/embed/ActPaSGuYI4"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen />
                             </div>
                         </div>
                     </div>

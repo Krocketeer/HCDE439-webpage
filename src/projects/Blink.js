@@ -3,7 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { ReactComponent as SvgDecoratorBlob1 } from "../images/svg-decorator-blob-1.svg";
 import { css } from "styled-components/macro";
-import { CopyBlock, monoBlue, dracula, obsidian } from "react-code-blocks"
+import { CopyBlock, monoBlue } from "react-code-blocks"
 
 import { SRLWrapper } from "simple-react-lightbox"
 import ScrollArrow from "../components/ScrollArrow";
@@ -118,8 +118,16 @@ export default function Blink() {
                                 After a few moments to allow the Arduino IDE verify and upload the code, it was now time
                                 to test it. With the press of the button...
                             </p>
+                            {/*<div style={styles.centerDiv}>*/}
+                            {/*    <img id="SeaTransIcons" src={blinkingLEDs} alt="Gif of LEDs blinking in successive order after pressing the button" />*/}
+                            {/*</div>*/}
                             <div style={styles.centerDiv}>
-                                <img id="SeaTransIcons" src={blinkingLEDs} alt="Gif of LEDs blinking in successive order after pressing the button" />
+                                <iframe className="DemoVideo"
+                                        title="Blink Project Demo"
+                                        src="https://www.youtube.com/embed/IwmomYLy9hA"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen />
                             </div>
                         </div>
                     </div>

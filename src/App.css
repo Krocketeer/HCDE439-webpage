@@ -130,9 +130,9 @@ html, body{
     cursor: zoom-in;
   }
 
-  #LightBarSwitchTestVideo {
-    width: 100%;
-    height: 100%;
+  .DemoVideo {
+    width: 17rem;
+    height: 10rem;
   }
 }
 
@@ -248,9 +248,11 @@ html, body{
     margin-bottom: 25px;
   }
 
-  #LightBarSwitchTestVideo {
+  .DemoVideo {
     width: 65vw;
     height: 36vw;
+    /*width: 44.5rem;*/
+    /*height: 24.5rem;*/
   }
 
   #CombinedCircuitImages {

@@ -131,8 +131,16 @@ export default function Fade() {
                                 take much longer on Clion than the Arduino IDE), it was now time to be faded.
                                 With the press of the button...
                             </p>
+                            {/*<div style={styles.centerDiv}>*/}
+                            {/*    <img id="SeaTransIcons" src={fadedLED} alt="Gif of a fading LED after pressing the button" />*/}
+                            {/*</div>*/}
                             <div style={styles.centerDiv}>
-                                <img id="SeaTransIcons" src={fadedLED} alt="Gif of a fading LED after pressing the button" />
+                                <iframe className="DemoVideo"
+                                        title="Fade Project Demo"
+                                        src="https://www.youtube.com/embed/9kX35v46OJ8"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen />
                             </div>
                         </div>
                     </div>

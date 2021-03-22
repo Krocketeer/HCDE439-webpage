@@ -144,8 +144,16 @@ export default function WebCom() {
                                 The gif shows the full functionality of the project: using the joystick to change what
                                 color the RGB LED shows using the webpage as the interface.
                             </p>
+                            {/*<div style={styles.centerDiv}>*/}
+                            {/*    <img id="SeaTransIcons" src={WebComGif} alt="Gif of a LED controlled by a Joystick" />*/}
+                            {/*</div>*/}
                             <div style={styles.centerDiv}>
-                                <img id="SeaTransIcons" src={WebComGif} alt="Gif of a LED controlled by a Joystick" />
+                                <iframe className="DemoVideo"
+                                        title="Web Communication Project Demo"
+                                        src="https://www.youtube.com/embed/8hGkB0OFcCM"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen />
                             </div>
                         </div>
                     </div>

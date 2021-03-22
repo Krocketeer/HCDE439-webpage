@@ -97,7 +97,7 @@ export default function LightBar() {
                                 do so for the LED bar.
                             </p>
                             <div style={styles.centerDiv}>
-                                <iframe id="LightBarSwitchTestVideo"
+                                <iframe className="DemoVideo"
                                         title="HCDE 439 Final Project Light Switch Testing"
                                         src="https://www.youtube.com/embed/4lGzdIIlexU"
                                         frameBorder="0"
@@ -261,14 +261,12 @@ export default function LightBar() {
                                 having to leave my desk.
                             </p>
                             <div style={styles.centerDiv}>
-                                <div style={styles.centerDiv}>
-                                    <iframe id="LightBarSwitchTestVideo"
-                                            title="HCDE 439 Final Project Light Switch Testing"
-                                            src="https://www.youtube.com/embed/R7wibHRGSE4"
-                                            frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowFullScreen />
-                                </div>
+                                <iframe className="DemoVideo"
+                                        title="HCDE 439 Final Project Light Switch Testing"
+                                        src="https://www.youtube.com/embed/R7wibHRGSE4"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen />
                             </div>
                         </div>
                     </div>
