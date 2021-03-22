@@ -77,11 +77,16 @@ html, body{
     justify-content: space-between;
   }
 
-  /*Footer gray bar*/
+  /* LocalHost Footer gray bar*/
   .sc-iBPRYJ.cYuPzz {
-    /*height: 46vh;*/
-    height: 17rem;
-    padding-top: 2.5rem;
+    height: 17rem !important;
+    padding-top: 2.5rem !important;
+  }
+
+  /* Production Footer gray bar */
+  .sc-iBPRYJ.cOWINi {
+    height: 17rem !important;
+    padding-top: 2.5rem !important;
   }
 
   #SeaTransType, #WSWSType {
@@ -181,8 +186,14 @@ html, body{
   /*Footer gray bar*/
   .sc-iBPRYJ.cYuPzz {
     /*height: 30vh;*/
-    height: 15rem;
-    padding-top: 2.5rem;
+    height: 15rem !important;
+    padding-top: 2.5rem !important;
+  }
+
+  /*Footer gray bar — I think this actually works*/
+  .sc-iBPRYJ.cOWINi {
+    height: 15rem !important;
+    padding-top: 2.5rem !important;
   }
 
   #SeaTransMoodBoard, #JPSSketchV1 {
