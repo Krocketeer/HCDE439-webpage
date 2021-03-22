@@ -77,6 +77,13 @@ html, body{
     justify-content: space-between;
   }
 
+  /*Footer gray bar*/
+  .sc-iBPRYJ.cYuPzz {
+    /*height: 46vh;*/
+    height: 17rem;
+    padding-top: 2.5rem;
+  }
+
   #SeaTransType, #WSWSType {
     width: 115%;
     height: 100%;
@@ -171,6 +178,13 @@ html, body{
     justify-content: space-between;
   }
 
+  /*Footer gray bar*/
+  .sc-iBPRYJ.cYuPzz {
+    /*height: 30vh;*/
+    height: 15rem;
+    padding-top: 2.5rem;
+  }
+
   #SeaTransMoodBoard, #JPSSketchV1 {
     width: 75%;
     height: 100%;
@@ -246,7 +260,7 @@ html, body{
   }
 
   .CombinedCircuit {
-    /*height: 32%;*/
+    height: 32%;
     width: 32%;
   }
 }

@@ -30,7 +30,7 @@ export default function Footer() {
                     a React theme created by  <a href={links.Owais} style={{color: "rgb(100, 21, 255)"}}>Owais Khan</a>.
                 </CopyrightText>
                 <CopyrightText>
-                    Kenny Le &copy; 2021 <a href={links.CC} style={{color: "rgb(100, 21, 255)"}}>CC BY-NC-ND 4.0</a>
+                    Kenny Le &copy; 2021 <a href={links.CC} style={{color: "rgb(100, 21, 255)"}}>CC BY-NC-SA 4.0</a>
                 </CopyrightText>
             </Row>
         </Content>
@@ -38,7 +38,7 @@ export default function Footer() {
 };
 
 const links = {
-    CC: "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    CC: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
     Treact: "https://treact.owaiskhan.me/",
     Owais: "https://owaiskhan.me/",
     linkedIn: "https://www.linkedin.com/in/kmdle/",
